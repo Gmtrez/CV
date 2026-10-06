@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Midhun M S — IT Operations & System Administration Professional Portfolio">
+<title>MIDHUN M S | IT Operations & System Administration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06070a; --panel:rgba(17,19,25,.72); --panel2:rgba(25,28,36,.62);
+  --text:#f4f6fa; --muted:#a9afbb; --line:rgba(255,255,255,.10);
+  --accent:#d7b86a; --accent2:#f0d991; --cyan:#76d7e7;
+  --shadow:0 20px 70px rgba(0,0,0,.45); --radius:24px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 10% 10%,rgba(118,215,231,.09),transparent 30%),
+ radial-gradient(circle at 85% 15%,rgba(215,184,106,.12),transparent 28%),
+ linear-gradient(135deg,#050608,#0b0d12 52%,#07080b);
+ color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.65}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,#000,transparent 80%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(5,6,8,.70);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Orbitron;letter-spacing:2px;font-size:15px;font-weight:800}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.navlinks a:hover{color:var(--accent2)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 10px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:130px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center}
+.eyebrow{font-family:Orbitron;color:var(--accent);font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+h1{font-family:Orbitron;font-size:clamp(42px,7vw,86px);line-height:.98;margin:0 0 22px;letter-spacing:-3px}
+h1 .gold{color:var(--accent2)}
+.hero h2{font-size:clamp(17px,2vw,25px);font-weight:500;color:#d9dde5;margin:0 0 22px}
+.hero p{max-width:750px;color:var(--muted);font-size:16px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-family:Orbitron;font-size:11px;letter-spacing:1px;text-transform:uppercase;transition:.25s}
+.btn.primary{background:linear-gradient(135deg,#d7b86a,#9f7b2e);color:#0b0c0f;border:0}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(215,184,106,.16)}
+.hero-card{position:relative;min-height:390px;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:var(--shadow);overflow:hidden}
+.hero-card:before{content:"M";position:absolute;right:-35px;top:-65px;font:900 330px/1 Orbitron;color:rgba(215,184,106,.07)}
+.orbit{position:absolute;inset:35px;border:1px solid rgba(118,215,231,.16);border-radius:50%;transform:rotate(-18deg)}
+.orbit:after{content:"";position:absolute;width:13px;height:13px;background:var(--accent2);border-radius:50%;top:7%;left:20%;box-shadow:0 0 28px var(--accent)}
+.card-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:40px}
+.initial{font-family:Orbitron;font-size:82px;color:var(--accent2);line-height:1}
+.card-content h3{font-family:Orbitron;margin:15px 0 5px;font-size:20px}
+.card-content p{color:var(--muted);margin:0}
+.status{display:flex;gap:8px;align-items:center;margin-top:30px;color:#bfc5cf;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8de1a0;box-shadow:0 0 15px #8de1a0}
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:38px}
+.kicker{font-family:Orbitron;color:var(--accent);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+h2{font-family:Orbitron;font-size:clamp(27px,4vw,44px);margin:7px 0 0;letter-spacing:-1px}
+.section-head p{max-width:520px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);backdrop-filter:blur(15px)}
+.panel h3{font-family:Orbitron;font-size:15px;margin:0 0 12px;color:#eef0f4}
+.panel p,.panel li{color:var(--muted);font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:9px}
+.skill{padding:9px 12px;border:1px solid rgba(215,184,106,.22);border-radius:999px;color:#d9dce3;font-size:12px;background:rgba(215,184,106,.05)}
+.timeline{position:relative;display:grid;gap:18px}
+.timeline:before{content:"";position:absolute;left:9px;top:12px;bottom:12px;width:1px;background:linear-gradient(var(--accent),transparent)}
+.role{position:relative;padding-left:35px}
+.role:before{content:"";position:absolute;left:4px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--accent2);box-shadow:0 0 18px rgba(215,184,106,.55)}
+.role .meta{font-family:Orbitron;font-size:10px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase}
+.role h3{font-size:18px;margin:7px 0 2px}
+.role .company{color:#d6d9df;font-size:13px}
+.role p{color:var(--muted);font-size:14px;margin:8px 0}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.edu-card{min-height:150px}
+.badge{display:inline-block;font:600 10px Orbitron;color:var(--accent);letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(215,184,106,.25);border-radius:8px;padding:6px 8px;margin-bottom:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card a{color:#e9d18d}
+footer{padding:30px 0 55px;color:#777e89;font-size:12px;border-top:1px solid var(--line)}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#0d1016;color:white;z-index:10;cursor:pointer}
+@media(max-width:800px){
+ .navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#090b0f;padding:18px 4%;flex-direction:column;gap:16px;border-bottom:1px solid var(--line)}
+ .navlinks.open{display:flex}.menu{display:block}.hero-grid,.contact{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.edu{grid-template-columns:1fr}.hero-card{min-height:300px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:110px}section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}h1{letter-spacing:-2px}.card-content{padding:28px}footer .container{display:block}footer p{margin:6px 0}}
+</style>
+</head>
+<body>
+<header class="nav">
+ <div class="container nav-inner">
+  <a class="brand" href="#home">M<span>•</span>MS</a>
+  <nav class="navlinks" id="navlinks">
+   <a href="#about">Profile</a><a href="#skills">Expertise</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="menu" id="menu">☰</button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div class="reveal">
+   <div class="eyebrow">Personal Portfolio / IT Operations</div>
+   <h1>MIDHUN <span class="gold">M S</span></h1>
+   <h2>IT Operations &amp; System Administration Professional</h2>
+   <p>IT operations professional with 5+ years of combined experience across site administration, information systems, computer operations, hardware maintenance and system administration.</p>
+   <div class="actions">
+    <a class="btn primary" href="#experience">Explore Career</a>
+    <a class="btn" href="#contact">Contact</a>
+   </div>
+  </div>
+  <div class="hero-card reveal">
+   <div class="orbit"></div>
+   <div class="card-content">
+    <div class="initial">M</div>
+    <h3>TECHNICAL • OPERATIONAL • FUTURE-READY</h3>
+    <p>Support systems. Solve problems. Keep operations moving.</p>
+    <div class="status"><span class="dot"></span> Available for professional opportunities</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">01 / Profile</div><h2>Built for reliable operations.</h2></div>
+  <p>Structured technical support with practical experience in systems, users, equipment and day-to-day operational continuity.</p></div>
+  <div class="grid">
+   <article class="panel reveal"><h3>Professional Summary</h3><p>Experienced in supporting day-to-day IT operations, maintaining systems, coordinating users and handling technical issues in structured work environments.</p></article>
+   <article class="panel reveal"><h3>Technical Focus</h3><p>IT support, system administration, computer operations, hardware maintenance, information systems and technical troubleshooting.</p></article>
+   <article class="panel reveal"><h3>Future Skills</h3><p>Generative AI fundamentals and digital technology awareness, supported by additional training in customer service and SEO.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">02 / Expertise</div><h2>Core competencies.</h2></div></div>
+  <div class="panel reveal">
+   <div class="skills">
+    <span class="skill">IT Operations &amp; Administration</span><span class="skill">System Administration</span><span class="skill">Computer Operations</span><span class="skill">Hardware Maintenance</span><span class="skill">Information Systems Support</span><span class="skill">Technical Troubleshooting</span><span class="skill">User &amp; Customer Support</span><span class="skill">Generative AI Fundamentals</span><span class="skill">Documentation &amp; Coordination</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">03 / Career</div><h2>Professional experience.</h2></div><p>A progression through site administration, computer operations, hardware maintenance and systems support.</p></div>
+  <div class="timeline">
+   <article class="role panel reveal"><div class="meta">4 Years</div><h3>Site Administrator — Information Systems Division</h3><div class="company">RCC, Trivandrum</div><p>Administered day-to-day site/information-systems activities and supported operational continuity. Handled coordination and technical support responsibilities within the assigned work environment.</p></article>
+   <article class="role panel reveal"><div class="meta">1 Year</div><h3>Trainee — Computer Operator &amp; Hardware Maintenance</h3><div class="company">RCC, Trivandrum</div><p>Performed computer operation and hardware-maintenance support activities. Assisted with routine technical issues and equipment-related tasks.</p></article>
+   <article class="role panel reveal"><div class="meta">6 Months</div><h3>System Administrator — Assistant</h3><div class="company">KINFRA Park</div><p>Supported system-administration activities and day-to-day technical operations. Assisted with user/system support and operational coordination.</p></article>
+   <article class="role panel reveal"><div class="meta">Apprenticeship</div><h3>Apprenticeship — Systems</h3><div class="company">Indian Rare Earths Ltd., Ernakulam</div><p>Gained practical exposure to systems-related workplace operations and technical processes.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="education">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">04 / Education</div><h2>Learning &amp; credentials.</h2></div></div>
+  <div class="edu">
+   <article class="panel edu-card reveal"><span class="badge">Ongoing</span><h3>Bachelor of Computer Applications (BCA)</h3><p>IGNOU</p></article>
+   <article class="panel edu-card reveal"><span class="badge">75.4%</span><h3>Diploma in Computer Engineering</h3><p>Board of Technical Education, Kerala</p></article>
+   <article class="panel edu-card reveal"><span class="badge">78.3%</span><h3>Plus Two — Electronics</h3><p>Board of Technical Examination, Kerala</p></article>
+   <article class="panel edu-card reveal"><span class="badge">81.0%</span><h3>SSLC</h3><p>Board of Public Examinations, Kerala</p></article>
+  </div>
+  <div class="grid" style="margin-top:18px">
+   <article class="panel reveal"><h3>Certifications &amp; Training</h3><ul>
+    <li>Generative AI Fundamentals — Databricks Accreditation</li><li>Customer Services — Oxford [OHSC] Course Completed</li><li>SEO Crash Course — Semrush Academy</li><li>NCC [B Certificate] — 4K Kerala Battalion</li>
+   </ul></article>
+   <article class="panel reveal"><h3>Key Strengths</h3><p><strong>Technical Support:</strong> Computer operations, hardware maintenance, systems support &amp; troubleshooting.</p><p><strong>Operations:</strong> Site administration, coordination, documentation and user support.</p></article>
+   <article class="panel reveal"><h3>Professional Direction</h3><p>Combining hands-on IT operations experience with ongoing academic development and emerging technology skills.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="section-head reveal"><div><div class="kicker">05 / Contact</div><h2>Let's connect.</h2></div><p>For professional opportunities, IT operations, technical support and related roles.</p></div>
+  <div class="contact">
+   <article class="panel contact-card reveal"><div class="kicker">Direct</div><h3>Phone</h3><p><a href="tel:+918921965636">+91 8921965636</a></p></article>
+   <article class="panel contact-card reveal"><div class="kicker">Email</div><h3>Professional Email</h3><p><a href="mailto:gentlemanisnow@gmail.com">gentlemanisnow@gmail.com</a></p></article>
+   <article class="panel contact-card reveal"><div class="kicker">Location</div><h3>Trivandrum, Kerala</h3><p>India</p></article>
+   <article class="panel contact-card reveal"><div class="kicker">Identity</div><h3>Midhun M S</h3><p>IT Operations &amp; System Administration Professional</p></article>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="container"><p>© <span id="year"></span> MIDHUN M S</p><p>IT Operations • Systems • Technology</p></div></footer>
+<button id="top" aria-label="Scroll to top">↑</button>
+<script>
+const menu=document.getElementById('menu'), links=document.getElementById('navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.getElementById('top').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
